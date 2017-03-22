@@ -12,6 +12,7 @@ function gameResult(text){
 
 function init(){
 	setTitle();
+	document.getElementById('message').innerText = '?';
 	number1=Math.floor((Math.random() * 200) + 1);
 	number2=Math.floor((Math.random() * 200) + 1);
 }
@@ -20,5 +21,4 @@ function onFinishGame(win){
 	if(win){
 		init();
 	}
-	document.getElementById('message').innerText = '...';
 }
