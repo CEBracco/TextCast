@@ -1,5 +1,5 @@
 window.onload = function() {
-	setTitle();
+	init();
 
 	cast.receiver.logger.setLevelValue(0);
 	window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
@@ -77,5 +77,5 @@ function showMessage(win){
 		type: type,
 		timer: 3000,
 		showConfirmButton: false
-	});
+	}, onFinishGame(win));
 }
