@@ -1,3 +1,3 @@
 <?php 
-	header( 'Location: /receiver.html' ) ;  
+	header( 'Location: /index.html' ) ;  
 ?>
