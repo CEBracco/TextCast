@@ -19,8 +19,7 @@ window.onload = function() {
 	castReceiverManager.onSenderDisconnected = function(event) {
 		console.log('Received Sender Disconnected event: ' + event.data);
 		if (window.castReceiverManager.getSenders().length == 0) {
-			// window.close();
-			alert("te desconectaste!");
+			window.close();			
 		}
 	};
 
@@ -38,6 +37,7 @@ window.onload = function() {
 	// handler for the CastMessageBus message event
 	window.messageBus.onMessage = function(event) {
 		console.log('Message [' + event.senderId + ']: ' + event.data);
+		alert("te desconectaste!");
 		// display the message from the sender
 		displayText(event.data);
 		// inform all senders on the CastMessageBus of the incoming message event
