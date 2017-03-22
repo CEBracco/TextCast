@@ -19,7 +19,8 @@ window.onload = function() {
 	castReceiverManager.onSenderDisconnected = function(event) {
 		console.log('Received Sender Disconnected event: ' + event.data);
 		if (window.castReceiverManager.getSenders().length == 0) {
-			window.close();
+			// window.close();
+			alert("te desconectaste!");
 		}
 	};
 
