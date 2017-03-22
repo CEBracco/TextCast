@@ -1,4 +1,6 @@
 window.onload = function() {
+	setTitle();
+
 	cast.receiver.logger.setLevelValue(0);
 	window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
 	console.log('Starting Receiver Manager');
@@ -37,7 +39,6 @@ window.onload = function() {
 	// handler for the CastMessageBus message event
 	window.messageBus.onMessage = function(event) {
 		console.log('Message [' + event.senderId + ']: ' + event.data);
-		alert("te desconectaste!");
 		// display the message from the sender
 		displayText(event.data);
 		// inform all senders on the CastMessageBus of the incoming message event
@@ -55,4 +56,26 @@ function displayText(text) {
 	console.log(text);
 	document.getElementById('message').innerText = text;
 	window.castReceiverManager.setApplicationState(text);
+
+	showMessage(gameResult(text));
 };
+
+function showMessage(win){
+	var title="¡Ganaste!";
+	var text="Lo hiciste muy bien :D";
+	var type="success";
+	
+	if(!win){
+		title="Has Perdido";
+		text="¡Suerte para la proxima!";
+		type="error";
+	}
+
+	swal({
+		title: title,
+		text: text,
+		type: type,
+		timer: 3000,
+		showConfirmButton: false
+	});
+}

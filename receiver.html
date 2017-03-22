@@ -2,19 +2,27 @@
 <html>
 
 	<head>
+		<meta charset="UTF-8"> 
+
 		<link rel="stylesheet" type="text/css" href="lib/materialize/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/sweetalert/sweetalert.css">
 		<link rel="stylesheet" type="text/css" href="css/receiver.css">
 		<title>Text Receiver</title>
 	</head>
 
 	<body>
 		<div class="container">
+			<h1 id="title"></h1>
 			<div class="card">
 				<div class="card-content center-align">
-					<h3 id="message">Hello world!</h3>
+					<h3 id="message">...</h3>
 				</div>
 			</div>
 		</div>
+
+		<script type="text/javascript" src="lib/sweetalert/sweetalert.min.js"></script>
+
+		<script type="text/javascript" src="js/mathGame.js"></script>
 
 		<script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
 		<script type="text/javascript" src="js/receiver.js"></script>
