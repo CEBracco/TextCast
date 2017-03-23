@@ -1,8 +1,8 @@
-var number1=Math.floor((Math.random() * 200) + 1);
-var number2=Math.floor((Math.random() * 200) + 1);
+var number1;
+var number2;
 
 function setTitle(){
-	document.getElementById('title').innerText = "¿Cuanto es " + number1 + " + " + number2 + "?" ;
+	document.getElementById('title').innerText = "¿Cuánto es " + number1 + " + " + number2 + "?" ;
 }
 
 function gameResult(text){
@@ -11,10 +11,10 @@ function gameResult(text){
 }
 
 function init(){
-	setTitle();
-	document.getElementById('message').innerText = '?';
 	number1=Math.floor((Math.random() * 200) + 1);
 	number2=Math.floor((Math.random() * 200) + 1);
+	setTitle();
+	document.getElementById('message').innerText = '?';
 }
 
 function onFinishGame(win){
